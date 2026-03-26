@@ -7,8 +7,8 @@
     - Basic text normalization (lowercasing, punctuation removal).
     - Feature engineering (length ratios, word overlap).
 3. **Similarity Grading Baseline**:
-    - **TF-IDF + Cosine Similarity**: Fast, lightweight baseline.
-    - **Sentence-Transformers**: A denser vector mapping baseline (if performance permits).
+    - **TF-IDF + Cosine Similarity**: Fast, lightweight baseline (Implemented).
+    - **Sentence-Transformers**: A denser vector mapping baseline (Planned future work as fallback/enhancement).
 4. **Streamlit UI**:
     - Dataset exploration page.
     - Live grading interface (Reference vs. Student answer).

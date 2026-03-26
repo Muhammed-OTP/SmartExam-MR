@@ -14,9 +14,10 @@ The MVP follows a layered, decoupled design while keeping deployment simple.
    - Saves fitted pipelines to disk using `joblib`.
 
 3. **Grading/Model Layer** (`src/smartexam_mr/models/`)
-   - Encapsulates embedding logic (TF-IDF or sentence-transformers).
-   - Computes similarity metrics.
-   - Maps similarity to a discrete or continuous grading scale.
+   - Uses TF-IDF vectorization and cosine similarity as a fast, reliable baseline for short-answer grading.
+   - Computes similarity metrics securely (handles missing data, bounds checks).
+   - Maps similarity to a grading scale (e.g., 0 to max_score) and provides interpretable feedback.
+   - *Future Work*: Encapsulates advanced embedding logic (like `sentence-transformers`) as an optional fallback or enhancement.
 
 4. **UI Layer** (`app/`)
    - A robust Streamlit dashboard.
