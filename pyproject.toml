@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smartexam-mr"
+version = "0.1.0"
+description = "Plateforme Intelligente d'Évaluation Académique Assistée par IA"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "Muhammad Salem", email = "muhammad.salem@example.com"}
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+    "tests",
+]
