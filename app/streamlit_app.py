@@ -1,7 +1,12 @@
 import streamlit as st
+import sys
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
-import os
+
+# Add the src directory to sys.path to allow imports from smartexam_mr
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", "src"))
+
 from smartexam_mr.models.grading import TFIDFGrader
 from smartexam_mr.pipeline.build_pipeline import (
     generate_synthetic_data,
@@ -73,7 +78,6 @@ st.markdown(
     }
     </style>
     """,
-    unsafe_allow_stdio=True,
     unsafe_allow_html=True,
 )
 
@@ -102,7 +106,12 @@ data = get_data()
 
 # 4. Sidebar Content
 with st.sidebar:
-    st.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=80)
+    logo_path = os.path.join(os.path.dirname(__file__), "logo.png")
+    if os.path.exists(logo_path):
+        st.image(logo_path, use_column_width=True)
+    else:
+        st.image("https://img.icons8.com/fluency/96/graduation-cap.png", width=80)
+    
     st.title("SmartExam-MR")
     st.info(
         "**MVP Académique (Master 1 AI)** \n\n Plateforme d’évaluation automatique adaptée au contexte Mauritanien."
