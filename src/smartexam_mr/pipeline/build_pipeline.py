@@ -1,6 +1,7 @@
 import re
 import pandas as pd
-from typing import List
+from typing import Any  # Changed to Any just in case, but let's check if we actually need typing. 
+# Actually, the file used List in type hints but let's see.
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
 
