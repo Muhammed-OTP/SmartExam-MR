@@ -1,7 +1,7 @@
 import re
+import os
 import pandas as pd
-from typing import Any  # Changed to Any just in case, but let's check if we actually need typing. 
-# Actually, the file used List in type hints but let's see.
+from typing import Any
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import FunctionTransformer
 
@@ -83,8 +83,6 @@ def build_preprocessing_pipeline() -> Pipeline:
 
 
 if __name__ == "__main__":
-    import os
-
     print("Generating synthetic data...")
     raw_df = generate_synthetic_data()
 
