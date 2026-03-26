@@ -23,15 +23,21 @@ files = [
     "tests/test_grading.py",
 ]
 
-notebook_content = '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 5\n}'
+notebook_content = (
+    '{\n "cells": [],\n "metadata": {},\n "nbformat": 4,\n "nbformat_minor": 5\n}'
+)
 
 for f in files:
     os.makedirs(os.path.dirname(f), exist_ok=True)
     with open(f, "w", encoding="utf-8") as file:
-        file.write('"""Placeholder"""\n' if f.endswith('.py') and '__init__' not in f else '')
+        file.write(
+            '"""Placeholder"""\n' if f.endswith(".py") and "__init__" not in f else ""
+        )
 
 os.makedirs("notebooks", exist_ok=True)
-with open("notebooks/01_preprocessing_and_grading_demo.ipynb", "w", encoding="utf-8") as f:
+with open(
+    "notebooks/01_preprocessing_and_grading_demo.ipynb", "w", encoding="utf-8"
+) as f:
     f.write(notebook_content)
 
 print("Scaffolding complete.")
