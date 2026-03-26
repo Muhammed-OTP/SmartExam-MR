@@ -1,23 +1,17 @@
 # Dataset Plan
 
-## Origin
-For the MVP, we will generate a realistic synthetic dataset mimicking short-answer exam submissions in computer science courses at a Mauritanian university.
+## Schema
+- `student_id`: Unique identifier for the student.
+- `course`: The academic subject (e.g., NLP, Computer Vision, Machine Learning, Project Management).
+- `question`: The simulated exam question.
+- `reference_answer`: The correct or expected answer.
+- `student_answer`: The actual text submitted by the student.
+- `question_type`: Analytical format (definition, explanation, comparison, etc.).
+- `difficulty`: Rated difficulty of the question on a scale of 1 to 5.
+- `score`: The evaluated grade, scoring from 0 to 10.
 
-## Structure
-The CSV dataset will include columns such as:
-- `student_id`: Unique identifier
-- `course`: E.g., NLP, Machine Learning, Computer Vision
-- `question`: The text of the exam question
-- `reference_answer`: The expected correct answer
-- `student_answer`: The actual submitted answer
-- `difficulty`: Categorical (Easy, Medium, Hard)
-- `score`: Placeholder for the actual grade out of 10 or 100
-
-## Intentional Imperfections
-To demonstrate the preprocessing pipeline, we will incorporate:
-- **Missing Values**: Empty rows or `NaN` student answers.
-- **Duplicates**: Accidental double submissions.
-- **Inconsistencies**: Variations in casing, punctuation, and leading/trailing spaces.
-
-## Future Expansion
-Post-MVP, this could be expanded to include real anonymized student answers, or integrated with an OCR pipeline for handwritten exams.
+## Simulated Anomalies (MVP)
+The `data/raw/student_exam_answers.csv` dataset explicitly models real-world noise:
+* **Missing Values**: Simulates blank tests or unsubmitted segments.
+* **Duplicate Rows**: Duplicated telemetry or pipeline errors.
+* **Inconsistent Formatting**: Simulates mobile input with extra whitespaces, varying punctuation patterns, and extreme casing.

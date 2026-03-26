@@ -43,7 +43,7 @@ streamlit run app/streamlit_app.py
 
 ## Roadmap
 - [x] Phase 1: Repository architecture and initial scaffold
-- [ ] Phase 2: Synthetic dataset generation and preprocessing pipeline
+- [x] Phase 2: Synthetic dataset generation and preprocessing pipeline
 - [ ] Phase 3: Intelligent grading baseline
 - [ ] Phase 4: Streamlit MVP implementation
 
