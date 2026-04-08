@@ -39,7 +39,7 @@ streamlit run app/streamlit_app.py
 ```
 
 ## Team
-- **Developer**: Muhammad Salem (Master 1 AI)
+- **DeveloperS**: Mohamed Salem Ebnou Echvagh Oubeid C34613, Mariem Mohamed El Bechir C34606
 
 ## Roadmap
 - [x] Phase 1: Repository architecture and initial scaffold
